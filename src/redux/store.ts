@@ -1,5 +1,3 @@
-import { appReducer } from './reducers';
-
 type TListener = () => void;
 export interface IAction {
     type: string;
@@ -50,5 +48,3 @@ export function createStore(reducer: TReducer, initialState: TState): IStore {
         },
     };
 }
-
-export const store = createStore(appReducer, { counter: 0 });

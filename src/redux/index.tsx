@@ -6,9 +6,12 @@
 import * as React from 'react';
 import { incrementValue } from './actions';
 import { ReduxContext, connect } from './connect';
-import { store } from './store';
+import { appReducer } from './reducers';
+import { createStore } from './store';
 
 import './redux.css';
+
+const store = createStore(appReducer, { counter: 0 });
 
 interface IProps {
     counter: number;
